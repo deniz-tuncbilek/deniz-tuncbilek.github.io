@@ -45,11 +45,11 @@ const AboutSection = () => {
                 { icon: GraduationCap, label: "Education", value: "M.S. Computer Science, UPenn" },
                 { icon: Cpu, label: "Interests", value: "AI, Digital Twins, Cloud" },
               ].map((item) => (
-                <div key={item.label} className="flex items-start gap-3 p-3 rounded-lg bg-secondary/50 border border-border/50">
-                  <item.icon className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                <div key={item.label} className="flex items-start gap-3 p-3 rounded-lg bg-primary/70 border border-primary/50">
+                  <item.icon className="h-4 w-4 text-primary-foreground mt-0.5 shrink-0" />
                   <div>
-                    <p className="text-xs text-muted-foreground">{item.label}</p>
-                    <p className="text-sm text-foreground font-medium">{item.value}</p>
+                    <p className="text-xs text-primary-foreground/70">{item.label}</p>
+                    <p className="text-sm text-primary-foreground font-medium">{item.value}</p>
                   </div>
                 </div>
               ))}

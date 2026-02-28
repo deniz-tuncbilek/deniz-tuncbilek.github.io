@@ -6,18 +6,21 @@ const education = [
     degree: "Master of Computer and Information Technology",
     institution: "University of Pennsylvania",
     gpa: "4.0",
+    year: "2024",
     focus: ["Computer Science", "Software Engineering", "Data Structures"],
   },
   {
     degree: "Bachelor of Engineering, Mechanical Engineering",
     institution: "University of Victoria",
     gpa: "3.7",
+    year: "2018",
     focus: ["Mechanical Design", "Systems Engineering", "Project Management"],
   },
   {
     degree: "High School Diploma — Mathematics and Sciences",
     institution: "Üsküdar Amerikan Lisesi (Üsküdar American Academy)",
     gpa: "3.7",
+    year: "2011",
     focus: ["Mathematics", "Sciences"],
   },
 ];
@@ -42,9 +45,16 @@ const EducationSection = () => {
                     <GraduationCap className="h-5 w-5 text-primary" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-foreground">{edu.degree}</h3>
-                    <p className="text-sm text-primary/80 mb-1">{edu.institution}</p>
-                    {edu.gpa && <p className="text-xs text-muted-foreground font-mono">GPA: {edu.gpa}</p>}
+                    <div className="flex items-start justify-between gap-4">
+                      <div>
+                        <h3 className="text-lg font-semibold text-foreground">{edu.degree}</h3>
+                        <p className="text-sm text-primary/80 mb-1">{edu.institution}</p>
+                      </div>
+                      <div className="text-right shrink-0">
+                        <p className="text-sm text-primary/80 font-mono">{edu.year}</p>
+                        {edu.gpa && <p className="text-sm text-primary/80">GPA: {edu.gpa}</p>}
+                      </div>
+                    </div>
 
                     <div className="flex items-center gap-2 mt-4">
                       <BookOpen className="h-3.5 w-3.5 text-muted-foreground" />

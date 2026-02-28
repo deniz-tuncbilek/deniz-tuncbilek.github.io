@@ -87,7 +87,7 @@ const ExperienceSection = () => {
               <ScrollReveal key={i} delay={i * 0.1}>
                 <div className="relative pl-8 md:pl-20">
                   {/* Dot */}
-                  <div className="absolute left-0 md:left-8 top-6 w-2 h-2 rounded-full bg-primary -translate-x-[3.5px]" />
+                  <div className="absolute left-0 md:left-8 top-6 w-3 h-3 rounded-full bg-primary -translate-x-[5.5px]" />
 
                   <div className="card-elevated p-6">
                     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-4">

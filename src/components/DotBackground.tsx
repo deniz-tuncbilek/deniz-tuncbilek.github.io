@@ -49,7 +49,7 @@ const DotBackground = () => {
         vx: (Math.random() - 0.5) * (type === "data" ? 0.6 : 0.2),
         vy: (Math.random() - 0.5) * (type === "data" ? 0.6 : 0.2),
         size: type === "hub" ? 3 : type === "data" ? 1.5 : Math.random() * 1.5 + 0.5,
-        opacity: type === "hub" ? 0.4 : type === "data" ? 0.3 : Math.random() * 0.2 + 0.05,
+        opacity: type === "hub" ? 0.7 : type === "data" ? 0.5 : Math.random() * 0.3 + 0.1,
         type,
         pulsePhase: Math.random() * Math.PI * 2,
         pulseSpeed: 0.01 + Math.random() * 0.02,
@@ -94,26 +94,26 @@ const DotBackground = () => {
           const dist = Math.sqrt(dx * dx + dy * dy);
 
           if (dist < connectionDist) {
-            const alpha = 0.06 * (1 - dist / connectionDist);
+            const alpha = 0.15 * (1 - dist / connectionDist);
             const isHubConnection = nodes[i].type === "hub" || nodes[j].type === "hub";
 
             ctx.beginPath();
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.lineTo(nodes[j].x, nodes[j].y);
             ctx.strokeStyle = isHubConnection
-              ? `hsla(200, 70%, 60%, ${alpha * 2})`
+              ? `hsla(200, 70%, 60%, ${alpha * 2.5})`
               : `hsla(215, 50%, 55%, ${alpha})`;
-            ctx.lineWidth = isHubConnection ? 0.8 : 0.4;
+            ctx.lineWidth = isHubConnection ? 1 : 0.6;
             ctx.stroke();
 
             // Spawn flow particles occasionally on hub connections
-            if (isHubConnection && frame % 120 === 0 && Math.random() < 0.3 && flowParticles.length < 20) {
+            if (isHubConnection && frame % 60 === 0 && Math.random() < 0.4 && flowParticles.length < 30) {
               flowParticles.push({
                 fromIdx: i,
                 toIdx: j,
                 t: 0,
                 speed: 0.008 + Math.random() * 0.012,
-                opacity: 0.5,
+                opacity: 0.8,
               });
             }
           }
@@ -147,25 +147,25 @@ const DotBackground = () => {
 
         if (node.type === "hub") {
           // Outer glow
-          const gradient = ctx.createRadialGradient(node.x, node.y, 0, node.x, node.y, 12);
-          gradient.addColorStop(0, `hsla(200, 70%, 60%, ${0.08 * pulse})`);
+          const gradient = ctx.createRadialGradient(node.x, node.y, 0, node.x, node.y, 18);
+          gradient.addColorStop(0, `hsla(200, 70%, 60%, ${0.2 * pulse})`);
           gradient.addColorStop(1, `hsla(200, 70%, 60%, 0)`);
           ctx.beginPath();
-          ctx.arc(node.x, node.y, 12, 0, Math.PI * 2);
+          ctx.arc(node.x, node.y, 18, 0, Math.PI * 2);
           ctx.fillStyle = gradient;
           ctx.fill();
 
           // Core
           ctx.beginPath();
           ctx.arc(node.x, node.y, node.size, 0, Math.PI * 2);
-          ctx.fillStyle = `hsla(200, 70%, 60%, ${node.opacity + pulse * 0.15})`;
+          ctx.fillStyle = `hsla(200, 70%, 60%, ${node.opacity + pulse * 0.25})`;
           ctx.fill();
 
           // Ring
           ctx.beginPath();
           ctx.arc(node.x, node.y, node.size + 3 + pulse * 2, 0, Math.PI * 2);
-          ctx.strokeStyle = `hsla(200, 70%, 60%, ${0.08 + pulse * 0.06})`;
-          ctx.lineWidth = 0.5;
+          ctx.strokeStyle = `hsla(200, 70%, 60%, ${0.15 + pulse * 0.1})`;
+          ctx.lineWidth = 0.8;
           ctx.stroke();
         } else if (node.type === "data") {
           // Small diamond shape for data particles
@@ -173,7 +173,7 @@ const DotBackground = () => {
           ctx.save();
           ctx.translate(node.x, node.y);
           ctx.rotate(Math.PI / 4);
-          ctx.fillStyle = `hsla(170, 60%, 55%, ${node.opacity + pulse * 0.1})`;
+          ctx.fillStyle = `hsla(170, 60%, 55%, ${node.opacity + pulse * 0.2})`;
           ctx.fillRect(-s, -s, s * 2, s * 2);
           ctx.restore();
         } else {
@@ -189,7 +189,7 @@ const DotBackground = () => {
         // Draw once as it's static — but since we clear, draw every frame at very low opacity
       }
       const gridSpacing = 80;
-      ctx.strokeStyle = `hsla(215, 30%, 50%, 0.02)`;
+      ctx.strokeStyle = `hsla(215, 30%, 50%, 0.05)`;
       ctx.lineWidth = 0.5;
       for (let x = 0; x < w; x += gridSpacing) {
         ctx.beginPath();
@@ -219,7 +219,7 @@ const DotBackground = () => {
     <canvas
       ref={canvasRef}
       className="absolute inset-0 w-full h-full pointer-events-none"
-      style={{ opacity: 0.8 }}
+      style={{ opacity: 1 }}
     />
   );
 };

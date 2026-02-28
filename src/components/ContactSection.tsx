@@ -70,12 +70,12 @@ const ContactSection = () => {
 
           <div className="flex items-center justify-center gap-4 mt-8">
             <Button variant="ghost" size="icon" asChild>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <a href="https://linkedin.com/in/deniztuncbilek" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <Linkedin className="h-5 w-5" />
               </a>
             </Button>
             <Button variant="ghost" size="icon" asChild>
-              <a href="mailto:hello@example.com" aria-label="Email">
+              <a href="mailto:odtuncbilek@gmail.com" aria-label="Email">
                 <Mail className="h-5 w-5" />
               </a>
             </Button>

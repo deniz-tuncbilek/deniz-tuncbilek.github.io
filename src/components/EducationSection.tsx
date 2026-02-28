@@ -5,19 +5,19 @@ const education = [
   {
     degree: "Master of Computer and Information Technology",
     institution: "University of Pennsylvania",
-    gpa: "",
+    gpa: "4.0",
     focus: ["Computer Science", "Software Engineering", "Data Structures"],
   },
   {
     degree: "Bachelor of Engineering, Mechanical Engineering",
     institution: "University of Victoria",
-    gpa: "",
+    gpa: "3.7",
     focus: ["Mechanical Design", "Systems Engineering", "Project Management"],
   },
   {
     degree: "High School Diploma — Mathematics and Sciences",
     institution: "Üsküdar Amerikan Lisesi (Üsküdar American Academy)",
-    gpa: "",
+    gpa: "3.7",
     focus: ["Mathematics", "Sciences"],
   },
 ];

@@ -18,21 +18,18 @@ const HeroSection = () => {
 
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-medium mb-8">
             <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-            Currently exploring AI applications in infrastructure
+            Manager at KPMG Management Consulting
           </div>
 
           <h1 className="text-5xl sm:text-6xl lg:text-7xl tracking-tight leading-[1.1] mb-6 text-primary font-normal font-mono">Deniz Tuncbilek
-
           </h1>
 
           <p className="text-lg sm:text-xl text-muted-foreground font-light tracking-wide mb-4">
-            Technology Strategy · Digital Transformation · AI & Infrastructure
+            Technology Strategy & Transformation · Digital Twins & AI · Engineering
           </p>
 
-          <p className="max-w-2xl mx-auto text-muted-foreground/80 text-base leading-relaxed mb-10">Technology leader and strategist driving digital transformation across criticalinfrastructure, public sector, and enterprise environments. Building the bridge between emerging technology and operational excellence.
-
-
-
+          <p className="max-w-2xl mx-auto text-muted-foreground/80 text-base leading-relaxed mb-10">
+            Enthusiastic, detail-oriented leader with demonstrated analytical problem-solving skills. Strong team player managing cross-functional teams and delivering high-quality outcomes across technology strategy, digital transformation, and public sector innovation.
           </p>
 
           <div className="flex items-center justify-center gap-4">
@@ -53,8 +50,8 @@ const HeroSection = () => {
           className="mt-20 grid grid-cols-3 gap-8 max-w-md mx-auto">
 
           {[
-          { value: "8+", label: "Years Experience" },
-          { value: "30+", label: "Projects Delivered" },
+          { value: "7+", label: "Years Experience" },
+          { value: "6+", label: "Organizations" },
           { value: "5", label: "Industries Served" }].
           map((metric) =>
           <div key={metric.label} className="text-center">

@@ -3,16 +3,22 @@ import { GraduationCap, BookOpen } from "lucide-react";
 
 const education = [
   {
-    degree: "Master of Science in Engineering Management",
-    institution: "University of Technology",
-    gpa: "3.9 / 4.0",
-    focus: ["Systems Engineering", "Data Analytics", "Technology Strategy"],
+    degree: "Master of Computer and Information Technology",
+    institution: "University of Pennsylvania",
+    gpa: "",
+    focus: ["Computer Science", "Software Engineering", "Data Structures"],
   },
   {
-    degree: "Bachelor of Science in Civil Engineering",
-    institution: "State University",
-    gpa: "3.7 / 4.0",
-    focus: ["Infrastructure Systems", "Structural Analysis", "Project Management"],
+    degree: "Bachelor of Engineering, Mechanical Engineering",
+    institution: "University of Victoria",
+    gpa: "",
+    focus: ["Mechanical Design", "Systems Engineering", "Project Management"],
+  },
+  {
+    degree: "High School Diploma — Mathematics and Sciences",
+    institution: "Üsküdar Amerikan Lisesi (Üsküdar American Academy)",
+    gpa: "",
+    focus: ["Mathematics", "Sciences"],
   },
 ];
 
@@ -38,7 +44,7 @@ const EducationSection = () => {
                   <div className="flex-1">
                     <h3 className="text-lg font-semibold text-foreground">{edu.degree}</h3>
                     <p className="text-sm text-primary/80 mb-1">{edu.institution}</p>
-                    <p className="text-xs text-muted-foreground font-mono">GPA: {edu.gpa}</p>
+                    {edu.gpa && <p className="text-xs text-muted-foreground font-mono">GPA: {edu.gpa}</p>}
 
                     <div className="flex items-center gap-2 mt-4">
                       <BookOpen className="h-3.5 w-3.5 text-muted-foreground" />

@@ -43,7 +43,7 @@ const Navbar = () => {
 
         <div className="hidden md:flex items-center gap-2">
           <Button variant="ghost" size="icon" asChild>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a href="https://linkedin.com/in/deniztuncbilek" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <Linkedin className="h-4 w-4" />
             </a>
           </Button>
@@ -79,7 +79,7 @@ const Navbar = () => {
         )}
           <div className="flex gap-2 pt-4">
             <Button variant="ghost" size="icon" asChild>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><Linkedin className="h-4 w-4" /></a>
+              <a href="https://linkedin.com/in/deniztuncbilek" target="_blank" rel="noopener noreferrer"><Linkedin className="h-4 w-4" /></a>
             </Button>
             <Button variant="ghost" size="icon" asChild>
               <a href="https://github.com" target="_blank" rel="noopener noreferrer"><Github className="h-4 w-4" /></a>

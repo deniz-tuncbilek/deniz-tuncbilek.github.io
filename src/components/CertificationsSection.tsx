@@ -2,12 +2,11 @@ import ScrollReveal from "./ScrollReveal";
 import { BadgeCheck } from "lucide-react";
 
 const certifications = [
-  { title: "AWS Solutions Architect – Professional", org: "Amazon Web Services", year: "2023" },
-  { title: "Project Management Professional (PMP)", org: "PMI", year: "2022" },
-  { title: "Google Cloud Professional Data Engineer", org: "Google Cloud", year: "2022" },
-  { title: "Certified Scrum Master (CSM)", org: "Scrum Alliance", year: "2021" },
-  { title: "Azure Fundamentals (AZ-900)", org: "Microsoft", year: "2021" },
-  { title: "Lean Six Sigma Green Belt", org: "ASQ", year: "2019" },
+  { title: "AWS Certified Cloud Practitioner", org: "Amazon Web Services", year: "" },
+  { title: "Google Project Management: Professional Certificate", org: "Google", year: "" },
+  { title: "Assessing, Combining, and Visualizing Data for Advisory", org: "KPMG", year: "" },
+  { title: "Project Management for AI", org: "", year: "" },
+  { title: "Leadership Milestone Programs: Leading Others", org: "KPMG", year: "" },
 ];
 
 const CertificationsSection = () => {
@@ -28,8 +27,8 @@ const CertificationsSection = () => {
                 <BadgeCheck className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                 <div>
                   <h3 className="text-sm font-semibold text-foreground leading-snug">{cert.title}</h3>
-                  <p className="text-xs text-muted-foreground mt-1">{cert.org}</p>
-                  <p className="text-xs text-muted-foreground/60 font-mono mt-0.5">{cert.year}</p>
+                  {cert.org && <p className="text-xs text-muted-foreground mt-1">{cert.org}</p>}
+                  {cert.year && <p className="text-xs text-muted-foreground/60 font-mono mt-0.5">{cert.year}</p>}
                 </div>
               </div>
             </ScrollReveal>

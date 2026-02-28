@@ -11,35 +11,58 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
-    title: "Senior Technology Strategy Consultant",
-    company: "Infrastructure & Digital Advisory",
-    dates: "2021 — Present",
+    title: "Manager",
+    company: "KPMG Canada",
+    dates: "Oct 2025 — Present",
     highlights: [
-      { text: "Leading AI integration strategy for critical infrastructure modernization programs", icon: Cpu },
-      { text: "Driving governance frameworks for cloud adoption across enterprise portfolios", icon: Shield },
-      { text: "Managing cross-functional teams of 15+ engineers and analysts", icon: Users },
-      { text: "Delivering data-driven insights that reduced project delivery timelines by 30%", icon: BarChart3 },
+      { text: "Technology strategy and transformation, digital twins, AI, data analytics", icon: Cpu },
+      { text: "Digital public sector and application managed services", icon: Globe },
+      { text: "Leading cross-functional consulting teams on enterprise engagements", icon: Users },
     ],
   },
   {
-    title: "Digital Transformation Lead",
-    company: "Public Sector Technology Group",
-    dates: "2018 — 2021",
+    title: "Senior Consultant",
+    company: "KPMG Canada",
+    dates: "Oct 2023 — Sep 2025",
     highlights: [
-      { text: "Spearheaded digital twin implementation for transportation infrastructure", icon: Globe },
-      { text: "Built analytics platforms processing 2M+ data points daily", icon: BarChart3 },
-      { text: "Established technology standards adopted across 12 regional agencies", icon: Shield },
-      { text: "Grew engineering team from 4 to 18 while maintaining delivery velocity", icon: TrendingUp },
+      { text: "Delivered technology strategy and transformation consulting engagements", icon: BarChart3 },
+      { text: "Drove digital transformation initiatives across public sector clients", icon: Shield },
+      { text: "Contributed to AI and data analytics solution development", icon: Cpu },
     ],
   },
   {
-    title: "Infrastructure Engineer",
-    company: "Engineering Solutions Corp",
-    dates: "2014 — 2018",
+    title: "Asset Integration Specialist",
+    company: "BC Rapid Transit Company (SkyTrain)",
+    dates: "2023",
     highlights: [
-      { text: "Designed and delivered critical infrastructure assessment tools", icon: Cpu },
-      { text: "Implemented data pipelines for real-time asset condition monitoring", icon: BarChart3 },
-      { text: "Led adoption of cloud-native architecture for legacy systems", icon: Globe },
+      { text: "Ensured capital replacement assets integration within budget, scope and timelines", icon: Shield },
+      { text: "Managed integration activities and deliverables for SkyTrain infrastructure", icon: TrendingUp },
+    ],
+  },
+  {
+    title: "Implementation Consultant",
+    company: "Fast Enterprises, LLC",
+    dates: "2022 — 2023",
+    highlights: [
+      { text: "Implemented COTS software solutions for finance ministries and government agencies", icon: Globe },
+      { text: "Delivered modern technology solutions for public sector clients", icon: BarChart3 },
+    ],
+  },
+  {
+    title: "Mechanical Engineer",
+    company: "OSI Maritime Systems",
+    dates: "2020 — 2021",
+    highlights: [
+      { text: "Integrated navigation systems and tactical solutions for NATO submarines and vessels", icon: Shield },
+    ],
+  },
+  {
+    title: "Mechanical Engineer",
+    company: "Dynamic Attractions",
+    dates: "2017 — 2020",
+    highlights: [
+      { text: "Design and commissioning of the world's most immersive mega-coaster", icon: Cpu },
+      { text: "Engineered the world's first ever sideways drop ride system", icon: TrendingUp },
     ],
   },
 ];

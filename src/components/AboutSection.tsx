@@ -19,7 +19,7 @@ const AboutSection = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-24 h-24 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center">
-                  <span className="text-3xl font-bold text-primary">JD</span>
+                  <span className="text-3xl font-bold text-primary">DT</span>
                 </div>
               </div>
             </div>
@@ -29,30 +29,32 @@ const AboutSection = () => {
           <ScrollReveal className="md:col-span-3" delay={0.2}>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                I'm a technology strategy consultant and engineering professional with over a decade
-                of experience leading digital transformation initiatives across infrastructure, public
-                sector, and enterprise organizations.
+                I'm a Manager at KPMG Canada's Management Consulting practice, specializing in
+                technology strategy and transformation, digital twins, AI, data analytics, and
+                digital public sector solutions.
               </p>
               <p>
-                My work sits at the intersection of engineering rigor and strategic vision — translating
-                complex technical landscapes into actionable roadmaps that drive measurable outcomes.
+                With a mechanical engineering foundation and a Master's in Computer Science from
+                the University of Pennsylvania, my work sits at the intersection of engineering
+                rigor and strategic vision.
               </p>
               <p>
-                I specialize in AI integration, cloud infrastructure modernization, and building the
-                governance frameworks that make innovation sustainable at scale.
+                My career spans diverse industries — from designing immersive theme park attractions
+                and integrating NATO naval systems, to implementing government software solutions
+                and leading digital transformation initiatives.
               </p>
               <p>
-                Currently focused on applying artificial intelligence and digital twin technologies
-                to transform how critical infrastructure is planned, built, and maintained.
+                I'm an enthusiastic, detail-oriented professional with strong analytical
+                problem-solving skills and a passion for delivering high-quality outcomes.
               </p>
             </div>
 
             <div className="grid grid-cols-2 gap-4 mt-10">
               {[
-                { icon: MapPin, label: "Location", value: "Washington, D.C." },
-                { icon: Building2, label: "Current Role", value: "Technology Strategy Consultant" },
-                { icon: GraduationCap, label: "Education", value: "M.S. Engineering" },
-                { icon: Cpu, label: "Interests", value: "AI, Infrastructure, Digital Twins" },
+                { icon: MapPin, label: "Location", value: "Victoria, BC" },
+                { icon: Building2, label: "Current Role", value: "Manager, KPMG Canada" },
+                { icon: GraduationCap, label: "Education", value: "M.S. Computer Science, UPenn" },
+                { icon: Cpu, label: "Interests", value: "AI, Digital Twins, Cloud" },
               ].map((item) => (
                 <div key={item.label} className="flex items-start gap-3 p-3 rounded-lg bg-secondary/50 border border-border/50">
                   <item.icon className="h-4 w-4 text-primary mt-0.5 shrink-0" />

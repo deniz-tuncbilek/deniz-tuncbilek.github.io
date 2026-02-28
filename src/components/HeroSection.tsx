@@ -103,7 +103,7 @@ const HeroSection = () => {
           className="mt-20 grid grid-cols-3 gap-8 max-w-md mx-auto"
         >
           {[
-            { value: "7+", label: "Years Experience" },
+            { value: "8+", label: "Years Experience" },
             { value: "6+", label: "Organizations" },
             { value: "5", label: "Industries Served" },
           ].map((metric) => (

@@ -20,7 +20,7 @@ const HeroSection = () => {
           {/* Mobile: photo + name/title inline row */}
           <div className="flex sm:hidden items-center gap-4 w-full">
             <div className="shrink-0">
-              <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-primary/20 shadow-lg bg-secondary">
+              <div className="w-20 h-20 rounded-full overflow-hidden shadow-lg bg-secondary">
                 <img src={headshot} alt="Deniz Tuncbilek" className="w-full h-full object-cover" />
               </div>
             </div>
@@ -39,7 +39,7 @@ const HeroSection = () => {
           <div className="hidden sm:flex flex-row items-center gap-10 md:gap-16">
             {/* Headshot */}
             <div className="shrink-0">
-              <div className="w-44 h-44 md:w-52 md:h-52 rounded-full overflow-hidden border-2 border-primary/20 shadow-lg bg-secondary">
+              <div className="w-44 h-44 md:w-52 md:h-52 rounded-full overflow-hidden shadow-lg bg-secondary">
                 <img src={headshot} alt="Deniz Tuncbilek" className="w-full h-full object-cover" />
               </div>
             </div>

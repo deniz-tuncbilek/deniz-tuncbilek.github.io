@@ -80,7 +80,7 @@ const ExperienceSection = () => {
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-0 md:left-8 top-0 bottom-0 w-px bg-border" />
+          <div className="absolute left-0 md:left-8 top-0 bottom-0 w-px bg-primary/30 -translate-x-[0.5px]" />
 
           <div className="space-y-8">
             {experiences.map((exp, i) => (

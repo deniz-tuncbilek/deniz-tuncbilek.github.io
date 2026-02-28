@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
 import DotBackground from "./DotBackground";
+import headshot from "@/assets/headshot.png";
 
 const HeroSection = () => {
   return (
@@ -14,27 +15,68 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.25, 0.4, 0.25, 1] }}
-          className="flex flex-col md:flex-row items-center gap-10 md:gap-16"
+          className="flex flex-col items-center gap-10"
         >
-          {/* Headshot */}
-          <div className="shrink-0">
-            <div className="w-44 h-44 sm:w-52 sm:h-52 rounded-full overflow-hidden border-2 border-primary/20 shadow-lg bg-secondary flex items-center justify-center">
-              <span className="text-4xl font-bold text-primary">DT</span>
+          {/* Mobile: photo + name/title inline row */}
+          <div className="flex sm:hidden items-center gap-4 w-full">
+            <div className="shrink-0">
+              <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-primary/20 shadow-lg bg-secondary">
+                <img src={headshot} alt="Deniz Tuncbilek" className="w-full h-full object-cover" />
+              </div>
+            </div>
+            <div className="text-left">
+              <h1 className="text-3xl tracking-tight leading-[1.1] text-primary font-normal font-mono">
+                Deniz Tuncbilek
+              </h1>
+              <div className="inline-flex items-center gap-2 mt-1 text-primary text-xs font-medium">
+                <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+                Manager at KPMG
+              </div>
             </div>
           </div>
 
-          {/* Text content */}
-          <div className="text-center md:text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-medium mb-6">
-              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-              Manager at KPMG Management Consulting
+          {/* Tablet & Desktop: side-by-side layout */}
+          <div className="hidden sm:flex flex-row items-center gap-10 md:gap-16">
+            {/* Headshot */}
+            <div className="shrink-0">
+              <div className="w-44 h-44 md:w-52 md:h-52 rounded-full overflow-hidden border-2 border-primary/20 shadow-lg bg-secondary">
+                <img src={headshot} alt="Deniz Tuncbilek" className="w-full h-full object-cover" />
+              </div>
             </div>
 
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl tracking-tight leading-[1.1] mb-4 text-primary font-normal font-mono">
-              Deniz Tuncbilek
-            </h1>
+            {/* Text content */}
+            <div className="text-left">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-medium mb-6">
+                <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+                Manager at KPMG Management Consulting
+              </div>
 
-            <p className="text-lg sm:text-xl text-muted-foreground font-light tracking-wide mb-4">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl tracking-tight leading-[1.1] mb-4 text-primary font-normal font-mono">
+                Deniz Tuncbilek
+              </h1>
+
+              <p className="text-lg md:text-xl text-muted-foreground font-light tracking-wide mb-4">
+                Technology Strategy & Transformation · Digital Twins & AI · Engineering
+              </p>
+
+              <p className="max-w-2xl text-muted-foreground/80 text-base leading-relaxed mb-8">
+                Enthusiastic, detail-oriented leader with demonstrated analytical problem-solving skills. Strong team player managing cross-functional teams and delivering high-quality outcomes across technology strategy, digital transformation, and public sector innovation.
+              </p>
+
+              <div className="flex items-center gap-4">
+                <Button variant="hero" size="lg" asChild>
+                  <a href="#projects">View My Work</a>
+                </Button>
+                <Button variant="heroOutline" size="lg" asChild>
+                  <a href="#contact">Contact Me</a>
+                </Button>
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile: remaining content below the header row */}
+          <div className="sm:hidden text-center">
+            <p className="text-lg text-muted-foreground font-light tracking-wide mb-4">
               Technology Strategy & Transformation · Digital Twins & AI · Engineering
             </p>
 
@@ -42,7 +84,7 @@ const HeroSection = () => {
               Enthusiastic, detail-oriented leader with demonstrated analytical problem-solving skills. Strong team player managing cross-functional teams and delivering high-quality outcomes across technology strategy, digital transformation, and public sector innovation.
             </p>
 
-            <div className="flex items-center justify-center md:justify-start gap-4">
+            <div className="flex items-center justify-center gap-4">
               <Button variant="hero" size="lg" asChild>
                 <a href="#projects">View My Work</a>
               </Button>

@@ -12,18 +12,7 @@ const AboutSection = () => {
           </h2>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-5 gap-12 items-start">
-          {/* Photo placeholder */}
-          <ScrollReveal className="md:col-span-2" delay={0.1}>
-            <div className="aspect-[3/4] rounded-xl bg-secondary border border-border overflow-hidden relative">
-              <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-24 h-24 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center">
-                  <span className="text-3xl font-bold text-primary">DT</span>
-                </div>
-              </div>
-            </div>
-          </ScrollReveal>
+        <div className="max-w-3xl">
 
           {/* Bio */}
           <ScrollReveal className="md:col-span-3" delay={0.2}>

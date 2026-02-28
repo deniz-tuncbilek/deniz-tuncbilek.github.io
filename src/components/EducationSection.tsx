@@ -51,7 +51,7 @@ const EducationSection = () => {
                         <p className="text-sm text-primary/80 mb-1">{edu.institution}</p>
                       </div>
                       <div className="text-right shrink-0">
-                        <p className="text-sm text-primary/80 font-mono">{edu.year}</p>
+                        <p className="text-lg font-semibold text-foreground">{edu.year}</p>
                         {edu.gpa && <p className="text-sm text-primary/80">GPA: {edu.gpa}</p>}
                       </div>
                     </div>

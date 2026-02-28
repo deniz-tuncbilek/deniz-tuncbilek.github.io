@@ -28,9 +28,7 @@ const Navbar = () => {
       }>
 
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
-        <a href="#" className="text-lg font-semibold tracking-tight text-foreground">dt.
-          <span className="text-primary">.</span>
-        </a>
+        <a href="#" className="text-lg font-semibold tracking-tight text-foreground">dt</a>
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-1">
